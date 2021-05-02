@@ -100,17 +100,25 @@ public class VizitkaController {
     return result;
   }
   @PostMapping (value = "/nova", params = {"jmeno", "firma","ulice","obecPsc","email","telefon","web"} )
-  public ModelAndView pridana (Vizitka vizitka) {
+  public String pridana (Vizitka vizitka) {
     seznamVizitek.add(vizitka);
     ModelAndView result = new ModelAndView("seznam");
     result.addObject("seznam", seznamVizitek);
-    return result;
+    return "redirect:/";
   }
+
+
 
   @GetMapping(path = "/detail", params = "id")
   public ModelAndView detail(int id) {
     ModelAndView result = new ModelAndView("detail");
     result.addObject("vizitka", seznamVizitek.get(id));
+    result.addObject("id", id);
     return result;
+  }
+  @PostMapping (value = "/detail", params = {"id"} )
+  public String delete (int id) {
+    seznamVizitek.remove(id);
+    return "redirect:/";
   }
 }
