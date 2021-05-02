@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vizitkovník</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class="nova">
+
+
+
+    <form class="formular" th:action="@{/nova}" method="get">
+
+        <label for="name">jmeno</label>
+        <input id="name" name="jmeno" type="text"/>
+
+        <label for="company">firma</label>
+        <input id="company" name="firma" type="text"/>
+
+        <label for="street">ulice</label>
+        <input id="street" name="ulice" type="text"/>
+
+        <label for="cityNumber">obecPsc</label>
+        <input id="cityNumber" name="obecPsc" type="text"/>
+
+        <label for="mail">email</label>
+        <input id="mail" name="email" type="text"/>
+
+        <label for="phone">telefon</label>
+        <input id="phone" name="telefon" type="text"/>
+
+        <label for="webs">web</label>
+        <input id="webs" name="web" type="text"/>
+        <div>
+            <button>Create</button>>
+        </div>
+    </form>
+</div>
+</body>
+</html>

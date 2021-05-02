@@ -92,6 +92,19 @@ public class VizitkaController {
     result.addObject("seznam", seznamVizitek);
     return result;
   }
+  @GetMapping(path = "/nova")
+  public ModelAndView nova() {
+    ModelAndView result = new ModelAndView("nova");
+    result.addObject("formular");
+    return result;
+  }
+  @GetMapping(value = "/nova", params = {"jmeno", "firma","ulice","obecPsc","email","telefon","web"} )
+  public ModelAndView pridana (Vizitka vizitka) {
+    seznamVizitek.add(vizitka);
+    ModelAndView result = new ModelAndView("seznam");
+    result.addObject("seznam", seznamVizitek);
+    return result;
+  }
 
   @GetMapping(path = "/detail", params = "id")
   public ModelAndView detail(int id) {
