@@ -15,52 +15,55 @@
 <div class="nova">
 
 
-
+    <div class="container  p-3 my-3 bg-dark text-white">
     <form class="formular" th:action="@{/nova}" method="post">
 
         <div class="p-3 mb-2 bg-primary text-white">Vytvoření nové vizitky</div>
+        <div class="col-md">
         <div class="container">
-            <div class="row">
+            <div class="row p-3">
                 <div class="col-md">
-                    <label for="name" class="form-label">jmeno</label>
-                    <input type="text" class="form-control" id="name" name="jmeno" placeholder="name@example.com">
+                    <label for="name" class="form-label">Jméno</label>
+                    <input type="text" class="form-control" id="name" name="jmeno" >
                 </div>
             </div>
-            <div class="row">
+            <div class="row p-3">
                 <div class="col-md">
-                    <label for="company" class="form-label">firma</label>
-                    <input type="text" class="form-control" id="company" name="firma" placeholder="name@example.com">
+                    <label for="company" class="form-label">Firma</label>
+                    <input type="text" class="form-control" id="company" name="firma">
                 </div>
             </div>
-            <div class="row">
+            <div class="row p-3">
                 <div class="col">
-                    <label for="street" class="form-label">ulice</label>
-                    <input type="text" class="form-control" id="street" name="ulice" placeholder="name@example.com">
+                    <label for="street" class="form-label">Ulice</label>
+                    <input type="text" class="form-control" id="street" name="ulice" >
                 </div>
                 <div class="col">
-                    <label for="cityNumber" class="form-label">obecPsc</label>
-                    <input type="text" class="form-control" id="cityNumber" name="obecPsc" placeholder="name@example.com">
+                    <label for="cityNumber" class="form-label">PSČ</label>
+                    <input type="text" class="form-control" id="cityNumber" name="obecPsc">
                 </div>
             </div>
-            <div class="row">
+            <div class="row p-3">
                 <div class="col">
-                    <label for="mail" class="form-label">email</label>
+                    <label for="mail" class="form-label">E-mail</label>
                     <input type="text" class="form-control" id="mail" name="email" placeholder="name@example.com">
                 </div>
                 <div class="col">
-                    <label for="phone" class="form-label">telefon</label>
-                    <input type="text" class="form-control" id="phone" name="telefon" placeholder="name@example.com">
+                    <label for="phone" class="form-label">Telefon</label>
+                    <input type="text" class="form-control" id="phone" name="telefon" placeholder="XXX XXX XXX">
                 </div>
                 <div class="col">
-                    <label for="webs" class="form-label">web</label>
+                    <label for="webs" class="form-label">Web</label>
                     <input type="text" class="form-control" id="webs" name="web" placeholder="www.example.com">
                 </div>
             </div>
         </div>
+        </div>
         <div>
-            <button type="button" class="btn btn-primary">Create</button>
+            <button class="btn btn-primary">Vytvoř</button>
         </div>
     </form>
+    </div>
 </div>
 </body>
 </html>
